@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   backTopFab: {
     width: '50px',
     height: '50px',
-    color: 'red',
   },
 }));
 
@@ -37,7 +36,6 @@ function ScrollTop(props) {
     const anchor = (event.target.ownerDocument || document).querySelector(
       '#back-to-top-anchor'
     );
-
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -72,6 +70,9 @@ export default function Header(props) {
       <ScrollTop {...props}>
         <Fab
           className={classes.backTopFab}
+          color="primary"
+          size="large"
+          aria-label="scroll back to top"
         >
           <ArrowUpwardIcon />
         </Fab>

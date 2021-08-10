@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: black;
 }
 
 .favoriteBackground {
@@ -14,9 +13,13 @@
 }
 
 .favoriteBackground h1 {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px rgb(196, 70, 70);
   font-size: 70px;
 }
 
-
+@media screen and (max-width: 600px) {
+  .favoriteBackground h1 {
+    font-size: 18px;
+  }
+}

@@ -33,11 +33,11 @@ export default function Movies({ loading, movies, setOffset, setFavCount }) {
   }, []);
 
   return (
-    <section className="containerMovie">
+    <section className="container">
       {loading ? (
         <Loader />
       ) : !movies.length ? (
-        <div>
+        <div className="searchBackground">
           <h1>No Such Film</h1>
         </div>
       ) : (
@@ -60,7 +60,6 @@ export default function Movies({ loading, movies, setOffset, setFavCount }) {
     </section>
   );
 }
-
 Movies.propTypes = {
   loading: PropTypes.bool.isRequired,
   movies: PropTypes.array.isRequired,

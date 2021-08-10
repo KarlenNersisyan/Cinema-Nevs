@@ -6,6 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import PanToolTwoToneIcon from '@material-ui/icons/PanToolTwoTone';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link, Redirect } from 'react-router-dom';
@@ -18,7 +19,18 @@ import { isUserValid } from '../../helpers/genre';
 import SignInError from '../../components/Errors/SignInError';
 import './Login.css';
 
-
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <a color="inherit" href="https://github.com/KarlenNersisyan">
+        {'KarlenNersisyan-GitHub'}
+      </a>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -74,23 +86,17 @@ export default function Login() {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          {/* <Typography component="h5" variant="h5" className="textP" >
+          <Typography component="h5" variant="h5" className="textP">
             <PanToolTwoToneIcon className="icon" />
             Welcome to our website.
           </Typography>
           <Typography component="h6" variant="h6">
             Sign up and find out more about your favorite films right{' '}
             <Link className="textHere" to="/register">
-               here
+              here
             </Link>
             :
-          </Typography> */}
+          </Typography>
           <Typography component="h2" variant="h4">
             Log In
           </Typography>
@@ -146,13 +152,15 @@ export default function Login() {
             <Grid>
               <Grid item>
                 <Link variant="body2" to="/register">
-                  <h3>Don't have an account yet? Register.</h3>
+                  Don't have an account? Register
                 </Link>
               </Grid>
             </Grid>
           </form>
         </div>
-        
+        <Box mt={2}>
+          <Copyright />
+        </Box>
       </Container>
     </Box>
   );

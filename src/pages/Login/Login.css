@@ -1,8 +1,8 @@
 .loginBackground {
-  background-image: url('../../assets/images/registerLoginBackground.jpg');
+  background-image: url('../../assets/images/loginBackground.jpg');
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  height: 120vh;
 }
 
 .icon {
